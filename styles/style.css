@@ -1,0 +1,228 @@
+/* Header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 3rem 1rem 3rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.logo {
+  font-family: "Bodoni Moda", serif;
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.btn {
+  color: #333333;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: bold;
+  list-style: none;
+  text-align: center;
+  transition: all 0.3s;
+  border-radius: 8px;
+}
+.sign-in {
+  background-color: rgba(51, 51, 51, 0.05);
+
+  border-width: 0;
+
+  margin: 0;
+  padding: 4px 2.5rem;
+
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
+.sign-in:active {
+  transform: scale(0.95);
+}
+.btn:hover {
+  background-color: #444;
+  color: white;
+}
+
+/* main */
+
+/* add section */
+
+.add {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+.add-btn {
+  font-size: 2.8rem;
+  border: none;
+  background-color: white;
+  padding: 2rem;
+}
+.add-btn:hover {
+  background-color: #444;
+}
+
+/* modal */
+
+.modal {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.hidden {
+  display: none;
+}
+.blur {
+  filter: blur(5px);
+}
+.add-book-form {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  background-color: rgb(240, 239, 239);
+  padding: 2rem;
+  border-radius: 10px;
+}
+.modal-title {
+  text-align: center;
+  padding: 1.8rem;
+}
+.input {
+  padding: 1.5rem 1rem;
+  font-size: 1.8rem;
+  border-radius: 10px;
+  border: none;
+}
+.read-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.7rem;
+}
+.checkbox {
+  height: 1.7rem;
+  width: 1.7rem;
+}
+
+.submit {
+  padding: 1rem 5rem;
+  border: none;
+  background-color: white;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+/* books display */
+
+.books-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  row-gap: 4rem;
+  column-gap: 4rem;
+  padding: 3rem;
+}
+
+.book {
+  padding: 3rem;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  font-size: 1.8rem;
+}
+
+.remove-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2.4rem;
+  width: 2.4rem;
+  border: none;
+  background-color: #f03e3e;
+  color: white;
+  border-top-right-radius: 5px;
+  cursor: pointer;
+}
+.remove-btn:hover,
+.remove-btn:active {
+  background-color: #e03131;
+}
+
+.title-container,
+.author-container,
+.pages-container {
+  display: flex;
+  gap: 5px;
+  box-shadow: rgb(44, 62, 80) 15px 0px 15px -15px inset;
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.content-title {
+  color: #999;
+}
+
+.title-content,
+.author-content {
+  word-wrap: break-word;
+  width: 100%;
+}
+
+.did-read {
+  border: none;
+  height: 5rem;
+  font-size: 1.7rem;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.read-yes {
+  background-color: #8ce99a;
+  color: #343a40;
+}
+.read-yes:hover {
+  background-color: #69db7c;
+}
+.read-no {
+  background-color: #ffa8a8;
+  color: #343a40;
+}
+.read-no:hover {
+  background-color: #ff8787;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Book Library</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">Oni Library</h1>
+      <button class="btn sign-in">Sign in</button>
+    </header>
+    <main>
+      <div class="add">
+        <button class="btn add-btn">+ Add book</button>
+      </div>
+      <div class="modal hidden">
+        <form class="add-book-form">
+          <h1 class="modal-title">Add new book</h1>
+          <input
+            class="input title"
+            type="text"
+            placeholder="title"
+            required
+            maxlength="50"
+          />
+          <input
+            class="input author"
+            type="text"
+            placeholder="Author"
+            required
+            maxlength="50"
+          />
+          <input
+            class="input pages"
+            type="number"
+            placeholder="Pages"
+            required
+            maxlength="50"
+          />
+          <div class="read-container">
+            <label for="read">Did you read it?</label>
+            <input class="checkbox" type="checkbox" id="read" />
+          </div>
+          <button class="btn submit" type="submit">Add</button>
+        </form>
+      </div>
+      <div class="books-container"></div>
+      <div class="overlay hidden"></div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
